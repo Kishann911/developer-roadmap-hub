@@ -192,6 +192,71 @@ body {
     width: 100%;
 }
 
+/* Guide section */
+.guides-section {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 4rem 1rem;
+}
+
+.guides-section h2 {
+    text-align: center;
+    margin-bottom: 3rem;
+    color: var(--primary-color);
+}
+
+.guide-category {
+    margin-bottom: 4rem;
+}
+
+.guide-category:last-child {
+    margin-bottom: 0;
+}
+
+.category-title {
+    font-size: 1.75rem;
+    color: var(--text-color);
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--border-color);
+}
+
+.guide-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.guide-card {
+    background-color: var(--card-bg);
+    border-radius: 0.5rem;
+    padding: 1.5rem;
+    box-shadow: var(--card-shadow);
+    transition: transform 0.3s, box-shadow 0.3s;
+    border: 1px solid var(--border-color);
+    text-align: left;
+}
+
+.guide-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--hover-shadow);
+}
+
+.guide-card h3 {
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+}
+
+.guide-card p {
+    color: var(--text-muted);
+    margin-bottom: 1rem;
+}
+
+.guide-card .btn-outline {
+    margin-top: 1rem;
+    width: 100%;
+}
+
 /* Footer styles */
 .footer {
     background-color: var(--header-bg);
@@ -267,5 +332,14 @@ input, .search-box, input[type="text"], input[type="search"] {
 
     .hero p {
         font-size: 1rem;
+    }
+
+    .guide-category {
+        margin-bottom: 3rem;
+    }
+    
+    .category-title {
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
     }
 }
