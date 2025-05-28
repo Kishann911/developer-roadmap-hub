@@ -32,117 +32,253 @@
             <div class="hero-content">
                 <h1>Developer Guides</h1>
                 <p>Comprehensive guides and tutorials to help you master various programming concepts and technologies.</p>
+                <div class="search-container">
+                    <input type="search" placeholder="Search guides..." class="search-box">
+                    <button class="btn btn-primary search-btn">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </div>
             </div>
         </section>
 
         <section class="guides-section">
-            <h2>Featured Guides</h2>
+            <div class="guides-header">
+                <h2>Featured Guides</h2>
+                <div class="category-filters">
+                    <button class="filter-btn active" data-category="all">All</button>
+                    <button class="filter-btn" data-category="fundamentals">Fundamentals</button>
+                    <button class="filter-btn" data-category="devops">DevOps</button>
+                    <button class="filter-btn" data-category="architecture">Architecture</button>
+                    <button class="filter-btn" data-category="data">Data Science</button>
+                    <button class="filter-btn" data-category="quality">Quality</button>
+                </div>
+            </div>
             
             <!-- Development Fundamentals -->
-            <div class="guide-category">
-                <h3 class="category-title">Development Fundamentals</h3>
+            <div class="guide-category" data-category="fundamentals">
+                <h3 class="category-title">
+                    <i class="fas fa-code"></i>
+                    Development Fundamentals
+                </h3>
                 <div class="guide-grid">
                     <div class="guide-card">
+                        <div class="guide-icon">
+                            <i class="fab fa-git-alt"></i>
+                        </div>
                         <h3>Getting Started with Git</h3>
                         <p>Learn version control basics, branching strategies, and collaboration workflows</p>
+                        <div class="guide-meta">
+                            <span><i class="far fa-clock"></i> 30 min read</span>
+                            <span><i class="far fa-star"></i> 4.8</span>
+                        </div>
                         <a href="#" class="btn btn-outline">Read Guide</a>
                     </div>
                     <div class="guide-card">
+                        <div class="guide-icon">
+                            <i class="fab fa-js"></i>
+                        </div>
                         <h3>JavaScript ES6+</h3>
                         <p>Modern JavaScript features, async programming, and best practices</p>
+                        <div class="guide-meta">
+                            <span><i class="far fa-clock"></i> 45 min read</span>
+                            <span><i class="far fa-star"></i> 4.9</span>
+                        </div>
                         <a href="#" class="btn btn-outline">Read Guide</a>
                     </div>
                     <div class="guide-card">
+                        <div class="guide-icon">
+                            <i class="fas fa-database"></i>
+                        </div>
                         <h3>SQL Mastery</h3>
                         <p>Comprehensive guide to database queries, optimization, and management</p>
+                        <div class="guide-meta">
+                            <span><i class="far fa-clock"></i> 60 min read</span>
+                            <span><i class="far fa-star"></i> 4.7</span>
+                        </div>
                         <a href="#" class="btn btn-outline">Read Guide</a>
                     </div>
                 </div>
             </div>
 
             <!-- DevOps & Infrastructure -->
-            <div class="guide-category">
-                <h3 class="category-title">DevOps & Infrastructure</h3>
+            <div class="guide-category" data-category="devops">
+                <h3 class="category-title">
+                    <i class="fas fa-server"></i>
+                    DevOps & Infrastructure
+                </h3>
                 <div class="guide-grid">
                     <div class="guide-card">
+                        <div class="guide-icon">
+                            <i class="fab fa-docker"></i>
+                        </div>
                         <h3>Docker Fundamentals</h3>
                         <p>Master containerization, Docker commands, and best practices</p>
+                        <div class="guide-meta">
+                            <span><i class="far fa-clock"></i> 40 min read</span>
+                            <span><i class="far fa-star"></i> 4.8</span>
+                        </div>
                         <a href="#" class="btn btn-outline">Read Guide</a>
                     </div>
                     <div class="guide-card">
+                        <div class="guide-icon">
+                            <i class="fas fa-code-branch"></i>
+                        </div>
                         <h3>CI/CD Pipeline</h3>
                         <p>Set up automated testing, building, and deployment workflows</p>
+                        <div class="guide-meta">
+                            <span><i class="far fa-clock"></i> 35 min read</span>
+                            <span><i class="far fa-star"></i> 4.6</span>
+                        </div>
                         <a href="#" class="btn btn-outline">Read Guide</a>
                     </div>
                     <div class="guide-card">
+                        <div class="guide-icon">
+                            <i class="fas fa-cloud"></i>
+                        </div>
                         <h3>Cloud Services</h3>
                         <p>Guide to AWS, Azure, and GCP services and deployment</p>
+                        <div class="guide-meta">
+                            <span><i class="far fa-clock"></i> 50 min read</span>
+                            <span><i class="far fa-star"></i> 4.7</span>
+                        </div>
                         <a href="#" class="btn btn-outline">Read Guide</a>
                     </div>
                 </div>
             </div>
 
             <!-- Architecture & Design -->
-            <div class="guide-category">
-                <h3 class="category-title">Architecture & Design</h3>
+            <div class="guide-category" data-category="architecture">
+                <h3 class="category-title">
+                    <i class="fas fa-sitemap"></i>
+                    Architecture & Design
+                </h3>
                 <div class="guide-grid">
                     <div class="guide-card">
+                        <div class="guide-icon">
+                            <i class="fas fa-plug"></i>
+                        </div>
                         <h3>REST API Design</h3>
                         <p>Learn REST principles, API design patterns, and best practices</p>
+                        <div class="guide-meta">
+                            <span><i class="far fa-clock"></i> 45 min read</span>
+                            <span><i class="far fa-star"></i> 4.8</span>
+                        </div>
                         <a href="#" class="btn btn-outline">Read Guide</a>
                     </div>
                     <div class="guide-card">
+                        <div class="guide-icon">
+                            <i class="fas fa-project-diagram"></i>
+                        </div>
                         <h3>System Design</h3>
                         <p>Learn scalable architecture, microservices, and distributed systems</p>
+                        <div class="guide-meta">
+                            <span><i class="far fa-clock"></i> 55 min read</span>
+                            <span><i class="far fa-star"></i> 4.9</span>
+                        </div>
                         <a href="#" class="btn btn-outline">Read Guide</a>
                     </div>
                     <div class="guide-card">
+                        <div class="guide-icon">
+                            <i class="fas fa-tachometer-alt"></i>
+                        </div>
                         <h3>Performance Optimization</h3>
                         <p>Code optimization, caching strategies, and performance monitoring</p>
+                        <div class="guide-meta">
+                            <span><i class="far fa-clock"></i> 40 min read</span>
+                            <span><i class="far fa-star"></i> 4.7</span>
+                        </div>
                         <a href="#" class="btn btn-outline">Read Guide</a>
                     </div>
                 </div>
             </div>
 
             <!-- Data Science & Analytics -->
-            <div class="guide-category">
-                <h3 class="category-title">Data Science & Analytics</h3>
+            <div class="guide-category" data-category="data">
+                <h3 class="category-title">
+                    <i class="fas fa-chart-line"></i>
+                    Data Science & Analytics
+                </h3>
                 <div class="guide-grid">
                     <div class="guide-card">
+                        <div class="guide-icon">
+                            <i class="fab fa-python"></i>
+                        </div>
                         <h3>Python for Data Science</h3>
                         <p>Data manipulation, analysis, and visualization with Python</p>
+                        <div class="guide-meta">
+                            <span><i class="far fa-clock"></i> 50 min read</span>
+                            <span><i class="far fa-star"></i> 4.8</span>
+                        </div>
                         <a href="#" class="btn btn-outline">Read Guide</a>
                     </div>
                     <div class="guide-card">
+                        <div class="guide-icon">
+                            <i class="fas fa-table"></i>
+                        </div>
                         <h3>Data Analysis Tools</h3>
                         <p>Master pandas, NumPy, and data visualization libraries</p>
+                        <div class="guide-meta">
+                            <span><i class="far fa-clock"></i> 45 min read</span>
+                            <span><i class="far fa-star"></i> 4.7</span>
+                        </div>
                         <a href="#" class="btn btn-outline">Read Guide</a>
                     </div>
                     <div class="guide-card">
+                        <div class="guide-icon">
+                            <i class="fas fa-brain"></i>
+                        </div>
                         <h3>Machine Learning Basics</h3>
                         <p>Introduction to ML algorithms and model development</p>
+                        <div class="guide-meta">
+                            <span><i class="far fa-clock"></i> 60 min read</span>
+                            <span><i class="far fa-star"></i> 4.9</span>
+                        </div>
                         <a href="#" class="btn btn-outline">Read Guide</a>
                     </div>
                 </div>
             </div>
 
             <!-- Quality & Security -->
-            <div class="guide-category">
-                <h3 class="category-title">Quality & Security</h3>
+            <div class="guide-category" data-category="quality">
+                <h3 class="category-title">
+                    <i class="fas fa-shield-alt"></i>
+                    Quality & Security
+                </h3>
                 <div class="guide-grid">
                     <div class="guide-card">
+                        <div class="guide-icon">
+                            <i class="fas fa-vial"></i>
+                        </div>
                         <h3>Testing Strategies</h3>
                         <p>Unit testing, integration testing, and test-driven development</p>
+                        <div class="guide-meta">
+                            <span><i class="far fa-clock"></i> 40 min read</span>
+                            <span><i class="far fa-star"></i> 4.7</span>
+                        </div>
                         <a href="#" class="btn btn-outline">Read Guide</a>
                     </div>
                     <div class="guide-card">
+                        <div class="guide-icon">
+                            <i class="fas fa-lock"></i>
+                        </div>
                         <h3>Security Best Practices</h3>
                         <p>Web security, authentication, and data protection guidelines</p>
+                        <div class="guide-meta">
+                            <span><i class="far fa-clock"></i> 45 min read</span>
+                            <span><i class="far fa-star"></i> 4.8</span>
+                        </div>
                         <a href="#" class="btn btn-outline">Read Guide</a>
                     </div>
                     <div class="guide-card">
+                        <div class="guide-icon">
+                            <i class="fas fa-code"></i>
+                        </div>
                         <h3>Code Quality</h3>
                         <p>Writing clean, maintainable, and efficient code</p>
+                        <div class="guide-meta">
+                            <span><i class="far fa-clock"></i> 35 min read</span>
+                            <span><i class="far fa-star"></i> 4.6</span>
+                        </div>
                         <a href="#" class="btn btn-outline">Read Guide</a>
                     </div>
                 </div>
