@@ -114,4 +114,57 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 });
+
+// Category filtering
+document.addEventListener('DOMContentLoaded', function() {
+    const filterButtons = document.querySelectorAll('.filter-btn');
+    const guideCategories = document.querySelectorAll('.guide-category');
+
+    filterButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            // Remove active class from all buttons
+            filterButtons.forEach(btn => btn.classList.remove('active'));
+            // Add active class to clicked button
+            button.classList.add('active');
+
+            const category = button.dataset.category;
+
+            // Show/hide categories based on filter
+            guideCategories.forEach(category => {
+                if (button.dataset.category === 'all') {
+                    category.style.display = 'block';
+                } else {
+                    category.style.display = category.dataset.category === button.dataset.category ? 'block' : 'none';
+                }
+            });
+        });
+    });
+
+    // Search functionality
+    const searchBox = document.querySelector('.search-box');
+    const searchBtn = document.querySelector('.search-btn');
+
+    function performSearch() {
+        const searchTerm = searchBox.value.toLowerCase();
+        const guideCards = document.querySelectorAll('.guide-card');
+
+        guideCards.forEach(card => {
+            const title = card.querySelector('h3').textContent.toLowerCase();
+            const description = card.querySelector('p').textContent.toLowerCase();
+            
+            if (title.includes(searchTerm) || description.includes(searchTerm)) {
+                card.style.display = 'flex';
+            } else {
+                card.style.display = 'none';
+            }
+        });
+    }
+
+    searchBtn.addEventListener('click', performSearch);
+    searchBox.addEventListener('keypress', (e) => {
+        if (e.key === 'Enter') {
+            performSearch();
+        }
+    });
+});
     
